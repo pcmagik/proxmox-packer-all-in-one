@@ -89,8 +89,8 @@ Oryginalne repozytorium można znaleźć tutaj:
 `https://github.com/geerlingguy/packer-boxes`
 
 ## 🌟 Co zmieniło się w stosunku do oryginalnego repozytorium?
-- Zaktualizowano Packer do najnowszej wersji, która obecnie to 1.9.4
-- Zaktualizowano konstruktor Packer Proxmox-ISO do najnowszej wersji, która obecnie to 1.1.6
+- Zaktualizowano Packer do najnowszej wersji na ten moment, która to 1.9.4
+- Zaktualizowano konstruktor Packer Proxmox-ISO do wersji, która obecnie to 1.1.6
 - Wszystkie VM mają włączone hasła
 - Wszystkie VM mają włączony użytkownik
 - Wszystkie VM mają włączony klucz SSH
@@ -98,5 +98,9 @@ Oryginalne repozytorium można znaleźć tutaj:
 - Wszystkie VM mają włączony napęd cloud-init
 - Wszystkie VM mają włączoną sieć cloud-init
 - Wszystkie VM mają włączoną strefę czasową cloud-init
+
+## 🌟 Co dalej?
+- Zaktualizować Packer do najnowszej wersji która obecnie to 1.10.3
+- Zaktualizować Packer Builder Proxmox-ISO do najnowszej wersji, która obecnie to 1.1.7
 
 [🇬🇧 English version of this file](README.md)
