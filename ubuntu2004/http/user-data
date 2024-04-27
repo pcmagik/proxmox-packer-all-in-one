@@ -1,0 +1,29 @@
+#cloud-config
+autoinstall:
+  version: 1
+  locale: en_US
+  keyboard:
+    layout: pl
+  storage:
+    layout:
+      name: lvm
+  identity:
+    hostname: ubuntu2004
+    username: pcmagik
+    password: "$6$exDY1mhS4KUYCE/2$zmn9ToZwTKLhCw.b4/b.ZRTIZM30JZ4QrOQ2aOXJ8yk96xpcCof0kxKwuX1kqLG/ygbJ1f8wxED22bTL4F46P0"
+  ssh:
+    install-server: yes
+    allow-pw: yes
+    authorized-keys:
+    - YOUR_SSH_KEY
+  user-data:
+    package_upgrade: false
+    disable_root: false
+    timezone: Europe/Warsaw
+#  packages: #dont know why but it doesnt work#change to late-commands and works#
+#    - qemu-guest-agent
+  late-commands:
+    - curtin in-target -- apt-get update
+    - curtin in-target -- apt-get install qemu-guest-agent
+    - 'sed -i "s/dhcp4: true/&\n      dhcp-identifier: mac/" /target/etc/netplan/00-installer-config.yaml'
+    - echo 'pcmagik ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/pcmagik
