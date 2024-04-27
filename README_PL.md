@@ -102,5 +102,6 @@ Oryginalne repozytorium można znaleźć tutaj:
 ## 🌟 Co dalej?
 - Zaktualizować Packer do najnowszej wersji która obecnie to 1.10.3
 - Zaktualizować Packer Builder Proxmox-ISO do najnowszej wersji, która obecnie to 1.1.7
+- Dodać więcej systemów, jak na przykład: Ubuntu 24.04 LTS
 
 [🇬🇧 English version of this file](README.md)
