@@ -1,0 +1,45 @@
+lang en_US
+keyboard --xlayouts='pl'
+timezone Europe/Warsaw --utc
+rootpw $2b$10$bG58zRsiyovyUC60wsBvPe3ICS7BhflhORsHkb6OH1KnnNmUGki4G --iscrypted
+reboot
+cdrom
+bootloader --append="rhgb quiet crashkernel=1G-4G:192M,4G-64G:256M,64G-:512M"
+zerombr
+clearpart --all --initlabel
+autopart
+network --bootproto=dhcp
+firstboot --disable
+selinux --enforcing
+firewall --enabled --http --ftp --smtp --ssh
+%packages
+@^server-product-environment
+@network-tools
+nmap
+wireshark
+@debugging
+@dial-up
+@hardware-monitoring
+@infiniband
+@performance
+iperf3
+@standard
+
+
+%post
+
+# Add pcmagik user with password Your_Password
+useradd pcmagik
+echo pcmagik:Your_Password | chpasswd
+
+# Set up ssh for pcmagik user
+mkdir -p /home/pcmagik/.ssh
+chmod 700 /home/pcmagik/.ssh
+# You need to replace 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC...' with the actual public key
+echo 'YOUR_SSH_KEY' > /home/pcmagik/.ssh/authorized_keys
+chmod 600 /home/pcmagik/.ssh/authorized_keys
+chown -R pcmagik:pcmagik /home/pcmagik/.ssh
+
+
+
+%end
