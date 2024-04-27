@@ -1,0 +1,19 @@
+lang en_US
+keyboard --xlayouts='pl'
+timezone Europe/Warsaw --utc
+rootpw $2b$10$SgYpSM1TS6s4Ib4eAb7Zvuh1M.88OmHxk.AdEGs2UJgl80HXu3pPG --iscrypted
+reboot
+text
+cdrom
+bootloader --append="rhgb quiet crashkernel=1G-4G:192M,4G-64G:256M,64G-:512M"
+zerombr
+clearpart --all --initlabel
+autopart
+network --bootproto=dhcp
+skipx
+firstboot --enable
+selinux --disabled
+%packages
+@^minimal-environment
+kexec-tools
+%end
