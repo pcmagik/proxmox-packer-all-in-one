@@ -104,4 +104,8 @@ The source repository can be found here:
 * All VMs has cloud-init network enabled
 * All VMs has cloud-init timezone enabled
 
+## 🌟 What's Next?
+- Update Packer to the latest version, which is currently 1.10.3
+- Update the Packer Proxmox-ISO Builder to the latest version, which is currently 1.1.7
+
 [🇵🇱 Polish version of this file](README_PL.md)
