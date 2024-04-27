@@ -80,7 +80,7 @@ The full list of variables you can customize is:
 
 🌟 This repository is a fork of few repositories listed down below and it's all work by @pcmagik.
 
-The original repository can be found here:
+The source repository can be found here:
 
 `https://github.com/dustinrue/proxmox-packer`
 
