@@ -107,5 +107,7 @@ The source repository can be found here:
 ## 🌟 What's Next?
 - Update Packer to the latest version, which is currently 1.10.3
 - Update the Packer Proxmox-ISO Builder to the latest version, which is currently 1.1.7
+- Add more OS support, like Ubuntu 24.04 LTS
 
+[🇬🇧 English version of this file](README.md)
 [🇵🇱 Polish version of this file](README_PL.md)
