@@ -53,7 +53,7 @@ Dodaj plik `variables.pkrvars.hcl` w głównym folderze z następującą zawarto
 ## 🚀 Rozpoczęcie pracy z szablonem
 
 Wszystkie kompilacje są przygotowane z niestandardową nazwą, hasłem i kluczem SSH. Szczegóły można znaleźć w pliku `template.pkr.hcl`, `ks.cfg` i pliku `user-data`.
-Ta kompilacja jest Wszystko-w-jednym, więc możesz użyć jej jako szablonu dla swoich VM. Gotowe od razu do użycia. Wystarczy zmienić swoją nazwę użytkownika, hasło, klucz SSH i jesteś gotowy do działania.
+Ta kompilacja jest All in one, więc możesz użyć jej jako szablonu dla swoich VM. Gotowe od razu do użycia. Wystarczy zmienić swoją nazwę użytkownika, hasło, klucz SSH i jesteś gotowy do działania.
 
 ## 🌟 Po zbudowaniu obrazu
 Po zbudowaniu obrazu możesz dostosować pozostałe ustawienia w napędzie cloud-init. Gotowy do użycia obraz będzie dostępny w Proxmox jako szablon.
